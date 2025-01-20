@@ -1,1 +1,207 @@
+:root {
+    --zinc-50: #fafafa;
+    --zinc-100: #f4f4f5;
+    --zinc-200: #e4e4e7;
+    --zinc-300: #d4d4d8;
+    --zinc-400: #a1a1aa;
+    --zinc-500: #71717a;
+    --zinc-600: #52525b;
+    --zinc-700: #3f3f46;
+    --zinc-800: #27272a;
+    --zinc-900: #18181b;
+    --zinc-950: #09090b;
 
+}
+
+#app, #app ::before, #app ::after {
+    --tsv-bg: var(--zinc-950);
+    --tsv-shaded-bg: var(--zinc-900);
+    --tsv-contrast-bg: var(--zinc-800);
+    --tsv-footer-bg: var(--zinc-900);
+    --tsv-font-subtitle-color: var(--zinc-500);
+    --tsv-shaded-item-selection: var(--zinc-800);
+    --tsv-shaded-footer-bg: var(--zinc-900);
+    --tsv-item-selection: var(--zinc-800);
+
+    --tsv-scrollbar-bg: var(--zinc-800);
+
+
+    --ts-context-menu-background: var(--zinc-800) !important;
+}
+
+/* Global Fonts */
+body #app,
+body .ts-context-menu {
+    font-family: "Inter", "Inter var", "Inter Variable Text", sans-serif;
+}
+
+/* Delete weird textures */
+.tsv-highlight.tsv-header:before {
+    background: none;
+    -webkit-mask: none;
+}
+
+.tsv-highlight.tsv-header {
+    background: none;
+}
+
+.ts-title-logo,
+.ts-background-hexes-container {
+    display: none;
+}
+
+/* UI Menu Titles */
+.ts-widget-section-header .title::before,
+.ts-widget-section-header .title::after {
+    display: none;
+}
+
+.ts-widget-section-header .title {
+    padding-left: var(--tsv-padding-h-small);
+    padding-right: var(--tsv-padding-h-small);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+/* cards */
+.ts-card {
+    padding: 1rem;
+}
+
+.ts-card-caption {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.ts-card-subtitle {
+    margin-bottom: 1.5rem;
+}
+
+.ts-user-style .ts-user-style-cards .ts-user-style-card {
+    background: var(--zinc-800);
+}
+
+.tsv-header:before {
+    /* Some weird blue texture at the top bar */
+    display: none;
+}
+
+/* Lists */
+.tsv-item {
+    padding: 0.5rem 1rem;
+}
+
+.tsv-item-text:has(.tsv-sidebar-tab-header-title) {
+    margin-left: 0;
+    margin-top: 1rem !important;
+    margin-bottom: var(--tsv-padding-v);
+} 
+
+.tsv-item .tsv-item-highlight {
+    display: block;
+    opacity: 0;
+    transition: opacity 100ms ease;
+}
+
+.tsv-item-blocked .tsv-item-highlight,
+.tsv-item:hover .tsv-item-highlight,
+.tsv-selected .tsv-item-highlight {
+    opacity: 1;
+}
+
+.ts-style-caption {
+    color: var(--zinc-600);
+}
+
+.tsv-list .ts-style-caption {
+    margin-top: 1rem !important;
+    margin: var(--tsv-padding-v) var(--tsv-padding-h-small);
+}
+
+/* sidebar */
+.resources-section-container .tsv-bar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.resources-section-container .tsv-tabs-slim:before {
+    left: 0;
+    right: 0;
+    border-radius: 0;
+}
+
+/* Context menu */
+.ts-context-menu,
+.ts-false-context-menu {
+    --tsv-item-selection: var(--zinc-800);
+    --ts-context-menu-background: var(--zinc-900);
+
+    padding: 0.33rem;
+}
+
+.ts-context-menu .tsv-tool-menu > li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.ts-context-menu .tsv-tool-menu > li:first-child {
+    margin-top: 0;
+}
+
+.ts-context-menu .tsv-tool-menu > li:last-child {
+    margin-top: 0;
+}
+
+
+/* channel list */
+.tsv-header-bar-below-tools:before {
+    background: none;
+}
+
+.ts-server-tree-item-background-no-image {
+    display: none;
+}
+
+.tsv-server-tree-icon,
+.tsv-server-tree-icon .tsv-icon,
+.tsv-server-tree-icon .tsv-icon svg {
+    height: 0.9rem !important;
+    min-height: 0.9rem !important;
+    min-width: 0.9rem !important;
+    width: 0.9rem !important;
+}
+
+/* 
+.ts-server-tree-item-node {
+    --tsv-padding-h: 0.75rem;
+    --tsv-padding-h-small: 0.5rem;
+    --tsv-padding-h-minimal: 0.25rem;
+} */
+
+/* chat */
+.ts-chat-room-event-bubble {
+    background: none !important;
+    color: var(--zinc-100) !important;
+    padding: 0 !important;
+}
+
+.ts-chat-room-event-bubble::before {
+    display: none !important;
+}
+
+.ts-chat-room-event-body .ts-chat-room-event-timestamp-container {
+    max-width: 54px;
+    min-width: 54px;
+    padding-top: 0.66rem;
+}
+
+/* activity group */
+.tsv-activity-group-list .tsv-item-group::before {
+    display: none;
+}
+
+/* mute/afk buttons */
+.tsv-tool-buttons::before {
+    display: none;
+}
