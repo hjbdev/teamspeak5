@@ -1,0 +1,17 @@
+
+/* chat */
+.ts-chat-room-event-bubble {
+    background: none !important;
+    color: var(--zinc-100) !important;
+    padding: 0 !important;
+}
+
+.ts-chat-room-event-bubble::before {
+    display: none !important;
+}
+
+.ts-chat-room-event-body .ts-chat-room-event-timestamp-container {
+    max-width: 54px;
+    min-width: 54px;
+    padding-top: 0.66rem;
+}

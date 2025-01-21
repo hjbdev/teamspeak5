@@ -1,0 +1,48 @@
+:root {
+    --zinc-50: #fafafa;
+    --zinc-100: #f4f4f5;
+    --zinc-200: #e4e4e7;
+    --zinc-300: #d4d4d8;
+    --zinc-400: #a1a1aa;
+    --zinc-500: #71717a;
+    --zinc-600: #52525b;
+    --zinc-700: #3f3f46;
+    --zinc-800: #27272a;
+    --zinc-900: #18181b;
+    --zinc-950: #09090b;
+}
+
+#app, #app ::before, #app ::after {
+    --tsv-bg: var(--zinc-950);
+    --tsv-shaded-bg: var(--zinc-900);
+    --tsv-contrast-bg: var(--zinc-800);
+    --tsv-footer-bg: var(--zinc-900);
+    --tsv-font-subtitle-color: var(--zinc-500);
+    --tsv-shaded-item-selection: var(--zinc-800);
+    --tsv-shaded-footer-bg: var(--zinc-900);
+    --tsv-item-selection: var(--zinc-800);
+    --tsv-scrollbar-bg: var(--zinc-800);
+
+    --ts-context-menu-background: var(--zinc-800) !important;
+}
+
+/* Global Fonts */
+body #app,
+body .ts-context-menu {
+    font-family: "Inter", "Inter var", "Inter Variable Text", sans-serif;
+}
+
+/* Delete weird textures */
+.tsv-highlight.tsv-header:before {
+    background: none;
+    -webkit-mask: none;
+}
+
+.tsv-highlight.tsv-header {
+    background: none;
+}
+
+.ts-title-logo,
+.ts-background-hexes-container {
+    display: none;
+}

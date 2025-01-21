@@ -1,0 +1,25 @@
+
+/* channel list */
+.tsv-header-bar-below-tools:before {
+    background: none;
+}
+
+.ts-server-tree-item-background-no-image {
+    display: none;
+}
+
+.tsv-server-tree-icon,
+.tsv-server-tree-icon .tsv-icon,
+.tsv-server-tree-icon .tsv-icon svg {
+    height: 0.9rem !important;
+    min-height: 0.9rem !important;
+    min-width: 0.9rem !important;
+    width: 0.9rem !important;
+}
+
+/* 
+.ts-server-tree-item-node {
+    --tsv-padding-h: 0.75rem;
+    --tsv-padding-h-small: 0.5rem;
+    --tsv-padding-h-minimal: 0.25rem;
+} */

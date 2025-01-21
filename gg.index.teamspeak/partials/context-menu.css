@@ -1,0 +1,22 @@
+/* Context menu */
+.ts-context-menu,
+.ts-false-context-menu {
+    --tsv-item-selection: var(--zinc-800);
+    --ts-context-menu-background: var(--zinc-900);
+
+    padding: 0.33rem;
+}
+
+.ts-context-menu .tsv-tool-menu > li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.ts-context-menu .tsv-tool-menu > li:first-child {
+    margin-top: 0;
+}
+
+.ts-context-menu .tsv-tool-menu > li:last-child {
+    margin-top: 0;
+}
+

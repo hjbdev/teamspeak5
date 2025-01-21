@@ -1,0 +1,32 @@
+
+/* Lists */
+.tsv-item {
+    padding: 0.5rem 1rem;
+}
+
+.tsv-item-text:has(.tsv-sidebar-tab-header-title) {
+    margin-left: 0;
+    margin-top: 1rem !important;
+    margin-bottom: var(--tsv-padding-v);
+} 
+
+.tsv-item .tsv-item-highlight {
+    display: block;
+    opacity: 0;
+    transition: opacity 100ms ease;
+}
+
+.tsv-item-blocked .tsv-item-highlight,
+.tsv-item:hover .tsv-item-highlight,
+.tsv-selected .tsv-item-highlight {
+    opacity: 1;
+}
+
+.ts-style-caption {
+    color: var(--zinc-600);
+}
+
+.tsv-list .ts-style-caption {
+    margin-top: 1rem !important;
+    margin: var(--tsv-padding-v) var(--tsv-padding-h-small);
+}
