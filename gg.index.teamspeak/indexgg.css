@@ -95,3 +95,8 @@ body .ts-context-menu {
 .ts-server-tree-item-leaf.channel:not(.spacer).has-password {
     --indicator-outline-color: transparent;
 }
+
+/* hide the empty button? @todo not specific enough */
+.tsv-header > .tsv-bar > .tsv-bar-item:first-child:has(.tsv-icon:first-child:last-child) {
+    /* display: none; */
+}
