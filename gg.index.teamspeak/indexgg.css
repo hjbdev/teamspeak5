@@ -1,11 +1,55 @@
-@import url(./partials/global.css);
-@import url(./partials/lists.css);
-@import url(./partials/cards.css);
-@import url(./partials/sidebar.css);
-@import url(./partials/context-menu.css);
-@import url(./partials/channel-list.css);
-@import url(./partials/chat.css);
+:root {
+    --zinc-50: #fafafa;
+    --zinc-100: #f4f4f5;
+    --zinc-200: #e4e4e7;
+    --zinc-300: #d4d4d8;
+    --zinc-400: #a1a1aa;
+    --zinc-500: #71717a;
+    --zinc-600: #52525b;
+    --zinc-700: #3f3f46;
+    --zinc-800: #27272a;
+    --zinc-900: #18181b;
+    --zinc-950: #09090b;
+}
 
+#app,
+#app ::before,
+#app ::after {
+    --tsv-bg: var(--zinc-950);
+    --tsv-shaded-bg: var(--zinc-900);
+    --tsv-contrast-bg: var(--zinc-800);
+    --tsv-footer-bg: var(--zinc-900);
+    --tsv-font-subtitle-color: var(--zinc-500);
+    --tsv-shaded-item-selection: var(--zinc-800);
+    --tsv-shaded-footer-bg: var(--zinc-900);
+    --tsv-item-selection: var(--zinc-800);
+    --tsv-scrollbar-bg: var(--zinc-800);
+
+    --ts-context-menu-background: var(--zinc-800) !important;
+
+    --ts-new-header-bg: var(--zinc-900);
+    --tsv-side-bar-bg-gradient-bottom: var(--zinc-900);
+    --tsv-header-bg: var(--zinc-900);
+
+    --settings-highlight-bg: var(--zinc-800);
+
+    --tsv-deviant-bg: var(--zinc-800);
+    --tsv-servertree-bg-gradient: var(--zinc-950);
+
+    --ts-tree-channel-bg-start: transparent;
+    --ts-tree-channel-bg-end: transparent;
+
+    --tsv-server-header-gradient-start: var(--zinc-900);
+    --tsv-server-header-gradient-end: var(--zinc-900);
+
+    --ts-tree-badges-bg: var(--zinc-800);
+}
+
+/* Global Fonts */
+body #app,
+body .ts-context-menu {
+    font-family: "Inter", "Inter var", "Inter Variable Text", sans-serif;
+}
 
 /* UI Menu Titles */
 .ts-widget-section-header .title::before,
@@ -16,8 +60,9 @@
 .ts-widget-section-header .title {
     padding-left: var(--tsv-padding-h-small);
     padding-right: var(--tsv-padding-h-small);
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
 }
 
 
@@ -29,4 +74,24 @@
 /* mute/afk buttons */
 .tsv-tool-buttons::before {
     display: none;
+}
+
+/* teamspeak logo */
+.ts-title-logo>svg {
+    opacity: 0;
+}
+
+/* hide the community button */
+.ts-join-community {
+    display: none;
+}
+
+/* channels */
+#app .ts-server-tree-item-background-no-image {
+    background: transparent;
+}
+
+/* hide the orange gradient on passworded channels */
+.ts-server-tree-item-leaf.channel:not(.spacer).has-password {
+    --indicator-outline-color: transparent;
 }
